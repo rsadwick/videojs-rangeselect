@@ -50,10 +50,12 @@
     // fire up the plugin
     var player;
     videojs("video").ready(function () {
-       player = this;
-       player.rangeselect();
-       player.rangeselect.setStartTime(0.8);
-       player.rangeselect.setEndTime(20.20);
+        player = this;
+        player.on("play", function(){
+            this.rangeselect();
+            this.rangeselect.setStartTime(5);
+            this.rangeselect.setEndTime(10);
+        })
     });
 
   </script>
