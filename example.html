@@ -48,7 +48,14 @@
   <script src="lib/videojs-rangeselect.js"></script>
   <script>
     // fire up the plugin
-    videojs('video').rangeselect();
+    var player;
+    videojs("video").ready(function () {
+       player = this;
+       player.rangeselect();
+       player.rangeselect.setStartTime(0.8);
+       player.rangeselect.setEndTime(20.20);
+    });
+
   </script>
 </body>
 </html>

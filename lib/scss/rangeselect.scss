@@ -1,28 +1,31 @@
-.handle
-{
-  background: #ff9900;
-  width: 196px;
-  height: 100px;
-  color: #ff1111;
-}
+$range-background-color: #ff9900;
+$handle-color: #ff1111;
+$handle-left-color: #aa88cc;
+$handle-right-color: #9900ff;
+$handle-size: 10px;
 
-.vjs-rangeselect-display{
-    background: #ff9900;
-    margin-top: -19px;
-}
+#range-selector {
+   background: $range-background-color;
+   margin-top: -19px;
 
-.handle-drags{
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  margin-top: -10px;
-}
+  .handle {
+    width: 196px;
+    height: 100px;
+    color: $handle-color;
+  }
 
-.left
-{
-  background: #AA88CC;
-}
+  .handle-drags {
+    width: $handle-size;
+    height: $handle-size;
+    margin-top: -$handle-size;
+  }
 
-.right{
-  margin-left: 90px;
+  .left {
+    background: $handle-left-color;
+  }
+
+  .right {
+    background: $handle-right-color
+  }
+
 }
